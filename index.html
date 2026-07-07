@@ -42,88 +42,89 @@ NAVBAR
     color:#ffd700!important;
 }
 
-/*--------------------------------------------------
-HERO
----------------------------------------------------*/
+/* ===============================
+   HERO SECTION
+================================= */
 
 .hero{
+    min-height:100vh;
+    background:linear-gradient(135deg,#4f46e5,#2563eb,#06b6d4);
+    background-size:300% 300%;
+    animation:gradientAnimation 8s ease infinite;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#f5f7ff;
+    text-align:center;
+}
 
-background:
-linear-gradient(135deg,#5B21B6,#2563EB,#06B6D4);
+.name-highlight{
+    color: hwb(29 14% 8%);
+    font-weight: 700;
+}
 
-background-size:300% 300%;
+@keyframes gradientAnimation{
 
-animation:gradientMove 10s infinite;
+0%{
+background-position:0% 50%;
+}
 
-min-height:100vh;
+50%{
+background-position:100% 50%;
+}
 
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-color:white;
+100%{
+background-position:0% 50%;
+}
 
 }
 
-@keyframes gradientMove{
+/* ===============================
+   PROFILE IMAGE
+================================= */
 
-0%{background-position:0%}
-
-50%{background-position:100%}
-
-100%{background-position:0%}
-
-}
-
-.hero span{
-
-color:#FFD700;
-
+.profile-container{
+    margin-bottom:25px;
 }
 
 .profile-img{
 
-width:220px;
+    width:220px;
+    height:220px;
 
-height:220px;
+    object-fit:cover;
 
-border-radius:50%;
+    border-radius:50%;
 
-object-fit:cover;
+    border:6px solid rgba(255,255,255,.4);
 
-border:8px solid rgba(255,255,255,.3);
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.35);
 
-box-shadow:
-
-0 15px 40px rgba(0,0,0,.4);
-
-transition:.5s;
+    transition:.5s;
 
 }
 
 .profile-img:hover{
 
-transform:scale(1.08) rotate(5deg);
+    transform:scale(1.05);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.45);
 
 }
 
-.hero .btn{
+/* Mobile */
 
-padding:14px 35px;
+@media(max-width:768px){
 
-border-radius:50px;
+.profile-img{
 
-font-weight:600;
+width:170px;
 
-transition:.4s;
+height:170px;
 
 }
-
-.hero .btn:hover{
-
-transform:translateY(-5px);
 
 }
 
@@ -383,12 +384,14 @@ background:#444;
     <div class="container">
 
         <!-- Profile Image -->
-        <img src="images/Ashlesha.jpeg"
-             class="profile-img mb-4"
-             alt="Ashlesha">
+        <div class="profile-container" data-aos="zoom-in">
+    <img src="images/Ashlesha.jpeg" alt="Ashlesha Vichare" class="profile-img">
+</div>
 
         <h1 class="display-3 fw-bold" data-aos="fade-up">
-            Hello, I'm <span>Ashlesha Vichare</span>
+            👋 Hello, I'm
+            <br>
+            <span class="name-highlight">Ashlesha Vichare</span>
         </h1>
 
         <h4 class="mt-3" id="typing"></h4>
@@ -503,20 +506,27 @@ background:#444;
 
             <h4 class="fw-bold">Online Jewelry Shop</h4>
 
-             <hr>
+             <hr> 
 
-             <p></section>PHP-based e-commerce platform.</p>
+             <p>PHP-based e-commerce platform.</p>
 
           </div>
 
         </div>
 
-      <div class="col-md-4" data-aos="fade-left" data-aos-delay="300">
-        <div class="card p-3">
-          <h5>Smart Food Delivery System</h5>
-          <p>Developed a responsive food ordering website using Python, Flask, SQLite.</p>
+      <div class="card h-100">
+
+          <div class="card-body">
+
+            <h4 class="fw-bold">Smart Food Delivery System</h4>
+
+             <hr>
+
+             <p>Developed a responsive food ordering website using Python, Flask, SQLite.</p>
+
+          </div>
+
         </div>
-      </div>
     </div>   
   </div>
 </section>
