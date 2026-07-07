@@ -14,89 +14,9 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        /* Navbar */
-        .navbar {
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        /* Hero */
-        .hero {
-            min-height: 100vh;
-            background: linear-gradient(to right, #0d6efd, #6610f2);
-            color: white;
-            display: flex;
-            align-items: center;
-        }
-
-        .hero h1 span {
-            color: #ffd700;
-        }
-
-        /* Sections */
-        .section-padding {
-            padding: 80px 0;
-        }
-
-        /* Skills */
-        .progress {
-            height: 10px;
-        }
-
-        /* Cards Hover */
-        .card {
-            border: none;
-            transition: all 0.4s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-        }
-
-        /* Footer */
-        footer {
-            background: #111;
-            color: #bbb;
-        }
-        /* 🌙 Dark Mode Styles */
-body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-body.dark-mode .navbar,
-body.dark-mode footer {
-    background-color: #000 !important;
-}
-
-body.dark-mode .card {
-    background-color: #1e1e1e;
-    color: #fff;
-}
-
-body.dark-mode .bg-light {
-    background-color: #1a1a1a !important;
-}
-
-body.dark-mode .progress {
-    background-color: #333;
-}
-
-body.dark-mode .btn-outline-light {
-    border-color: #fff;
-    color: #fff;
-}
-.offcanvas {
-  transition: transform 0.4s ease-in-out;
-}
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -125,14 +45,50 @@ body.dark-mode .btn-outline-light {
 <!-- Hero -->
 <section id="home" class="hero text-center">
     <div class="container">
-        <h1 class="display-4 fw-bold" data-aos="fade-up">
-            Hi, I'm <span>Ashlesha</span>
+
+        <!-- Profile Image -->
+        <img src="images/profile.jpg"
+             class="profile-img mb-4"
+             alt="Ashlesha">
+
+        <h1 class="display-3 fw-bold" data-aos="fade-up">
+            Hello, I'm <span>Ashlesha Vichare</span>
         </h1>
+
         <h4 class="mt-3" id="typing"></h4>
-        <p class="mt-4" data-aos="fade-up" data-aos-delay="200">
-            Passionate Web Developer focused on building modern, responsive applications.
+
+        <p class="mt-4 lead" data-aos="fade-up" data-aos-delay="200">
+            Passionate Web Developer creating modern, responsive and user-friendly websites with beautiful UI/UX.
         </p>
-        <a href="#contact" class="btn btn-light btn-lg mt-3">Contact Me</a>
+
+        <div class="mt-4">
+
+            <a href="resume.pdf"
+               class="btn btn-warning btn-lg me-3"
+               download>
+               Download Resume
+            </a>
+
+            <a href="#contact"
+               class="btn btn-outline-light btn-lg">
+               Contact Me
+            </a>
+
+        </div>
+
+        <!-- Social Links -->
+<div class="social-icons mt-4">
+
+    <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <a href="https://github.com/YOUR-GITHUB" target="_blank">
+        <i class="fab fa-github"></i>
+    </a>
+
+</div>
+
     </div>
 </section>
 
@@ -191,27 +147,41 @@ body.dark-mode .btn-outline-light {
     </h2>
 
     <div class="row">
-      <div class="col-md-4" data-aos="fade-right">
-        <div class="card p-3">
-          <h5>Library Management System</h5>
-          <p>ASP.NET CRUD-based system.</p>
-        </div>
-      </div>
+        <div class="card h-100">
 
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
-        <div class="card p-3">
-          <h5>Online Jewelry Shop</h5>
-          <p>PHP-based e-commerce platform.</p>
+          <div class="card-body">
+
+            <h4 class="fw-bold">Library Management System</h4>
+
+             <hr>
+
+             <p>ASP.NET CRUD-based system.</p>
+
+          </div>
+
         </div>
-      </div>
+
+       <div class="card h-100">
+
+          <div class="card-body">
+
+            <h4 class="fw-bold">Online Jewelry Shop</h4>
+
+             <hr>
+
+             <p></section>PHP-based e-commerce platform.</p>
+
+          </div>
+
+        </div>
 
       <div class="col-md-4" data-aos="fade-left" data-aos-delay="300">
         <div class="card p-3">
-          <h5>Online Art Gallery</h5>
-          <p>Dynamic art management website.</p>
+          <h5>Smart Food Delivery System</h5>
+          <p>Developed a responsive food ordering website using Python, Flask, SQLite.</p>
         </div>
       </div>
-    </div>
+    </div>   
   </div>
 </section>
 
